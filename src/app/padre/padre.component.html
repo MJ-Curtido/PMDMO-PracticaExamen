@@ -1,0 +1,8 @@
+<app-hijo [modoProHijo]="modoProPadre" (textoParrafo1)="cambiarTextoParrafo1($event)" (mostrar)="cambiarMostrarParrafos($event)" (textoParrafo2)="cambiarTextoParrafo2($event)">
+  <p>Hola uena tarde</p>
+</app-hijo>
+
+<p *ngIf="mostrarParrafos">{{textoP1 | pipeInsulto:["pa ti mi cola", "en verda no tonto", "jiji"]}}</p>
+<p [appDirectivaRara]="{color: 'color1'}" #parrafo2 *ngIf="mostrarParrafos">Parrafo 2</p>
+
+<button (click)="cambiarModoPro()">Modo pro</button>
